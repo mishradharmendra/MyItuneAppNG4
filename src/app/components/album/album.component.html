@@ -1,0 +1,36 @@
+<div id="album" *ngIf="album">
+    <header class="album-header">
+        <div class="row">
+            <!--<div class="col-md-4">
+                <div *ngIf="album.images.length > 0">
+                    <img class="album-thumb" src="{{album.images[0].url}}">
+                </div>
+            </div>-->
+            <h4><span >
+          Artist Name :   {{album[albumChildIds[0]].artistName}}
+            </span></h4>
+            <div class="col-md-8" *ngFor="let childId of albumChildIds">
+
+                <h2>{{album[childId].name}}</h2>
+                <h5>Release Date: {{album[childId].releaseDate}}</h5>
+                <a class="btn btn-primary" target="_blank" href="{{album[childId].artistUrl}}">View In Itunes</a>
+
+
+              <!--  <div class="album-tracks">
+                    <h2>Album Tracks</h2>
+                    <div>
+                        <div class="well">
+
+                            <a href="{{album[childId].offers[1].assets[1].preview.url}}" target="_blank">Preview Track</a>
+                        </div>
+                    </div>
+                </div>
+-->
+
+            </div>
+
+        </div>
+    </header>
+
+
+</div>
